@@ -1,0 +1,484 @@
+:root {
+    --primaryTextColor: #232e35;
+    --scondaryTextColor: #656d72;
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --primaryBgColor: #fff;
+    --secondaryBgColor: #fbfbfb;
+    --thirdBgColor: #f5f3fe;
+
+    --primaryIconColor: #7e74f1;
+    --primaryIconColorHover: #5d51e8;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorederRadius: 0.7rem;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 80px;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--primaryTextColor)
+}
+
+p {
+    font-size: 1rem; 
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--scondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto; 
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+
+/* Judul */
+
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--scondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-size: 0.9rem;
+}
+
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* layout */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Logo Nav */
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2rem;
+    flex: 1; 
+}
+
+.logo a {
+    color: var(--primaryTextColor);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    flex: 2; 
+    justify-content: center;
+}
+
+.nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li a {
+    color: var(--primaryTextColor);
+}
+
+
+.ayam div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 7px;
+    transition: all 0.3s;
+    z-index: 99;
+}
+
+.ayam{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* Hero */
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--primaryIconColor) ;
+}
+
+.hero-right img {
+    width: 50%;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+/* education section */
+#education {
+    background-color: var(--secondaryBgColor);
+    padding: var(--sectionPadding);
+}
+
+.education .pre-title {
+    margin: 0 auto;
+}
+
+.education-title {
+    text-align: center;
+}
+
+.education {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBgColor);
+    border-radius: var(--itemBorederRadius);
+}
+
+.education h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.education-icon {
+    background: var(--thirdBgColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+}
+
+.education-icon svg {
+    fill: var(--primaryIconColor);
+}
+
+/* SDN 2 */
+.education-icon {
+    background: var(--thirdBgColor);
+    width: 200px; 
+    height: 200px; 
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-icon img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+/* Experience section */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.experience {
+    border: 1px solid var(--itemBorederRadius);
+}
+
+.experience-item {
+    background: var(--thirdBgColor);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.experience-cover img {
+    width: 100%;
+    height: 200px; 
+    object-fit: contain;
+}
+
+
+.experience-item {
+    padding: 2rem 1.5rem;
+}
+
+.experience-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.experience h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.experience-title a svg:hover {
+    fill: var(--primaryIconColor);
+} 
+
+.experience-title a svg {
+   transition: 0.2s ease-in-out;
+ }
+
+ .experience-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 0rem 0;
+    .experience-tags {
+        min-height: 50px; 
+    }
+    
+    .experience-item p {
+        min-height: 80px; 
+    }
+    
+ }
+
+ .experience-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    padding: 1rem 1rem;
+    color: var(--secondaryTextColor);
+ }
+
+ /* Skills */
+ #skills {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+  }
+  
+  .skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+  }
+  
+  .educations {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .educations .line {
+    padding: 0 0.7rem;
+  }
+  
+  .educations .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--primaryIconColor);
+    position: relative;
+  }
+  
+  .educations-info p {
+    margin: 0.6rem 0 1.4rem;
+  }
+  
+  .educations-years {
+    margin-bottom: 3rem;
+  }
+  
+  .educations .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--primaryIconColorHover);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+  }
+  
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+  
+  .skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+  }
+
+  #contact{
+    padding: 6rem 2rem;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 3rem;
+    align-items: start;
+  }
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form div{
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: .75rem 1.3rem;
+    background: var(--primaryBgColor);
+    border: 1px solid var(--primaryTextColor);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea input::placeholder {
+    color: var(--scondaryTextColor);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid var(--primaryIconColor); 
+    background-color: #fff; 
+}
+
+
+.btn-submit{
+    width: 100%;
+    padding: .75rem 1.3rem;
+    background-color: var(--primaryIconColorHover);
+    color: var(--borderColor);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out ;
+ }
+
+ .btn-submit:hover{
+    background: var(--primaryIconColorHover);
+ }
+
+ .contact-item{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+ }
+
+ .contact-icon {
+    background: var(--primaryBgColor);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .contact-icon svg{
+    fill: var(--primaryIconColorHover);
+ }
+
+/* Footer Section */
+footer {
+    padding: 4rem 0;
+    background: var(--secondaryBackgroundColor);
+    text-align: center;
+  }
+
+footer {
+    padding: 4rem 0;
+    background: #8c8ccc;
+    text-align: center;
+    color: white;
+    border-top: 5px solid #ffffff;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+  
+  .footer-icons {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-icons a {
+    margin: 0 0.5rem;
+  }
+  
+  .footer-icons svg {
+    fill: #f1f7fc;
+  }
+  
+  .footer-icons a:hover svg {
+    fill:var(--primaryIconColorHover);
+  }
