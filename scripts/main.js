@@ -21,14 +21,14 @@ const navSlide = () => {
 
   document.querySelectorAll('.nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault(); // Mencegah default jump-to behavior
+        e.preventDefault();
         
-        const targetId = this.getAttribute('href'); // Ambil target ID dari href
+        const targetId = this.getAttribute('href'); 
         const targetElement = document.querySelector(targetId);
         
         if (targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, // 80px untuk menghindari tertutup navbar
+                top: targetElement.offsetTop - 80, 
                 behavior: 'smooth'
             });
         }
